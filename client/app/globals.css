@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-text: #0C0C0C;
+  --color-button: #2B2E32;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerpaddin {
+  @apply px-4 sm:px-6 lg:px-10 xl:px-20 2xl:px-20;
+}
+.title {
+  @apply text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] ;
+}
+.subtitle {
+  @apply  text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] mb-[20px] lg:mb-0;
+}
+.small-text {
+  @apply text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px];
+}
+.description {
+  @apply  text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px];
+}
+
+
+.margin-y {
+  @apply my-[20px] sm:my-[30px] md:my-[40px] lg:my-[50px] xl:my-[60px] 2xl:my-[70px];
+}
+
