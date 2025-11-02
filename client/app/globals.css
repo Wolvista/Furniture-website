@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
   --color-text: #0C0C0C;
   --color-button: #2B2E32;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -59,7 +60,7 @@
   @apply text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15px] 2xl:text-[16px];
 }
 .description {
-  @apply  text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[22px];
+  @apply  text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] ;
 }
 
 .margin-y {
