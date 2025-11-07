@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 export function Navbar2() {
   return (
     <>
-      <Navbar className="top-2" />
+      <Navbar />
       <div className="h-20"></div>
     </>
   );
@@ -41,7 +41,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <>
       <div
-        className={cn("fixed top-4 lg:top-10 inset-x-0 max-w-5xl mx-auto z-50 px-4", className)}
+        className={cn("fixed top-2 lg:top-4 inset-x-0 max-w-5xl mx-auto z-50 px-4", className)}
       >
         {/* Desktop Navbar */}
         <div className="bg-white rounded-full hidden lg:flex items-center justify-center px-8 shadow-lg">
@@ -113,7 +113,7 @@ function Navbar({ className }: { className?: string }) {
 
       {/* Mobile Menu Dropdown */}
       {mounted && mobileMenuOpen && (
-        <div className="fixed top-[5.5rem] left-4 right-4 bottom-4 bg-white rounded-2xl shadow-xl z-40 lg:hidden overflow-hidden">
+        <div className="fixed top-20 left-4 right-4 bottom-4 bg-white rounded-2xl shadow-xl z-40 lg:hidden overflow-hidden">
           <div className="flex flex-col p-6 gap-4 overflow-y-auto h-full">
             <Link href="/" onClick={() => setMobileMenuOpen(false)} className={`hover:text-black font-medium py-2 transition-colors ${pathname === '/' ? 'text-black font-bold' : 'text-gray-600'}`}>
               Home

@@ -11,7 +11,7 @@ import BlogComponent from '../component/Blog/blog'
 function Page() {
     const [activeCategory, setActiveCategory] = useState('All')
     return (
-        <div>
+        <div className="font-poppins">
             <Navbar2 />
             <div className='containerpaddin container mx-auto'>
                 <div className='margin-y'>

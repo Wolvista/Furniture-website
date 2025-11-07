@@ -5,7 +5,7 @@ import Footer2 from "../component/Footer/Footer2";
 
 function page() {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar2 />
       <ComingSoon />
       <Footer2 />

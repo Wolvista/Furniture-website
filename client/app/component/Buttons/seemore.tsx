@@ -10,7 +10,7 @@ function seemore() {
                     See More
                 </div>
                 <div className='text-white text-sm pr-1 py-1'>
-                    <img src="/image/Icon/Buttonicon.png" alt="arrow-right" width={50} height={50}  />
+                    <img src="/image/Icon/Buttonicon.png" alt="arrow-right" width={50} height={50} className='w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] lg:w-[30px] lg:h-[30px] xl:w-[40px] xl:h-[40px] 2xl:w-[45px] 2xl:h-[45px]' />
                 </div>
             </div>
     </button>
