@@ -17,7 +17,7 @@ function Header() {
           {/* Title Section  */}
           <div>
             {/* Main Title */}
-            <div className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold font-poppins leading-tight">
+            <div className="subtitle font-poppins leading-tight">
               Book a Personal Design
               <br />
               Consultation

@@ -10,7 +10,7 @@ function ComingSoon() {
 
       {/* Main Coming Soon Section */}
       <div className="mb-10">
-        <div className="containerpaddin container mx-auto">
+        <div className="containerpaddin container mx-auto py-10 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
             {/* Left Side - Content */}
             <div className="flex flex-col gap-6 lg:gap-8 order-1 lg:order-1">
@@ -27,7 +27,9 @@ function ComingSoon() {
               </h1>
 
               {/* Description */}
+
               
+
 
               {/* Countdown or Email Subscription */}
               

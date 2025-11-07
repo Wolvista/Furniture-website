@@ -18,33 +18,58 @@ function Consult() {
     if (window.innerWidth < 1024) {
       return;
     }
+
+    let hasCompleted = false;
+
     const ctx = gsap.context(() => {
-      // Pin the section during scroll
       ScrollTrigger.create({
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=1000",
+        end: "+=700",
         pin: true,
-
         scrub: true,
       });
 
       // Animate items on y-axis during scroll
-      const tl = gsap.timeline({
+      const animTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
           end: "+=800",
           scrub: 1,
+          onUpdate: (self) => {
+            if (self.progress === 1 && !hasCompleted) {
+              hasCompleted = true;
+
+              gsap.to(
+                [
+                  item1Ref.current,
+                  item2Ref.current,
+                  item3Ref.current,
+                  item4Ref.current,
+                ],
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 0,
+                  overwrite: true,
+                }
+              );
+
+              // Kill the ScrollTrigger so it can't reverse
+              self.kill(true);
+            }
+          },
         },
       });
 
       // Animate each item with different y positions
-      tl.fromTo(
-        item1Ref.current,
-        { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1 }
-      )
+      animTimeline
+        .fromTo(
+          item1Ref.current,
+          { y: 100, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1 }
+        )
         .fromTo(
           item2Ref.current,
           { y: 150, opacity: 0 },
@@ -65,7 +90,7 @@ function Consult() {
         );
     }, sectionRef);
 
-    return () => ctx.revert(); // Cleanup
+    return () => ctx.revert();
   }, []);
 
   return (

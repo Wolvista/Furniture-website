@@ -21,7 +21,7 @@ function Craft() {
           >
             <div className="flex flex-col gap-0 xl:gap-15 ">
               {/* Main Title */}
-              <h2 className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold font-poppins leading-tight">
+              <h2 className="subtitle font-poppins leading-tight">
                 Crafting Bespoke Furniture for Modern Living
               </h2>
 
