@@ -17,7 +17,7 @@ function From() {
             {/* How We Do It Label */}
 
             {/* Main Title */}
-            <h2 className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-semibold font-poppins leading-tight">
+            <h2 className="subtitle font-poppins leading-tight">
               From Concept to <br className="hidden  sm:block" /> Creation
             </h2>
           </div>
