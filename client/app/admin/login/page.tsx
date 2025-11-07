@@ -10,7 +10,29 @@ function LoginPage() {
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [emailError, setEmailError] = useState<string | null>(null)
   const router = useRouter()
+
+  // Email validation function
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setEmail(value)
+    
+    // Clear previous errors
+    if (emailError) {
+      setEmailError(null)
+    }
+    
+    // Validate email format if user has typed something
+    if (value && !validateEmail(value)) {
+      setEmailError('Please enter a valid email address')
+    }
+  }
 
   // Redirect to admin if already authenticated
   useEffect(() => {
@@ -27,6 +49,14 @@ function LoginPage() {
     e.preventDefault()
     setIsLoading(true)
     setError(null)
+    setEmailError(null)
+    
+    // Validate email format before submission
+    if (!validateEmail(email)) {
+      setEmailError('Please enter a valid email address')
+      setIsLoading(false)
+      return
+    }
     
     try {
       await signInWithEmailAndPassword(auth, email, password)
@@ -59,24 +89,36 @@ function LoginPage() {
           )}
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Field */}
-            <div className="relative">
-              <div className="absolute left-4 top-1/2 -translate-y-1/2">
-                <Image
-                  src="/image/contact/ctloog/mail.png"
-                  alt="Email"
-                  width={18}
-                  height={18}
-                  className="w-5 h-5 opacity-60"
+            <div>
+              <div className="relative">
+                <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                  <Image
+                    src="/image/contact/ctloog/mail.png"
+                    alt="Email"
+                    width={18}
+                    height={18}
+                    className="w-5 h-5 opacity-60"
+                  />
+                </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={handleEmailChange}
+                  onBlur={() => {
+                    if (email && !validateEmail(email)) {
+                      setEmailError('Please enter a valid email address')
+                    }
+                  }}
+                  required
+                  className={`w-full pl-12 pr-4 py-3 bg-[#F5F5F5] rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#475158]/20 font-poppins text-base ${
+                    emailError ? 'border-2 border-red-300' : ''
+                  }`}
                 />
               </div>
-              <input
-                type="email"
-                placeholder="Email Address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full pl-12 pr-4 py-3 bg-[#F5F5F5] rounded-lg border-none focus:outline-none focus:ring-2 focus:ring-[#475158]/20 font-poppins text-base"
-              />
+              {emailError && (
+                <p className="mt-2 text-sm text-red-600">{emailError}</p>
+              )}
             </div>
 
             {/* Password Field */}
@@ -108,7 +150,7 @@ function LoginPage() {
             </div>
 
             {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -122,29 +164,18 @@ function LoginPage() {
               >
                 Forgot password?
               </a>
-            </div>
+            </div> */}
 
             {/* Submit Button */}
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full group bg-button text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="w-full group bg-button text-white rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 py-4"
             >
               <div className="flex flex-row items-center justify-center">
-                <div className="text-white description px-4 sm:px-3 md:px-5 lg:px-2 xl:px-3 2xl:px-4 font-poppins">
+                <div className="text-white description px-10">
                   {isLoading ? 'Logging in...' : 'Login'}
                 </div>
-                {!isLoading && (
-                  <div className="text-white text-sm pr-1 py-1">
-                    <img
-                      src="/image/Icon/Buttonicon.png"
-                      alt="arrow-right"
-                      width={50}
-                      height={50}
-                      className="w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] lg:w-[30px] lg:h-[30px] xl:w-[40px] xl:h-[40px] 2xl:w-[55px] 2xl:h-[55px]"
-                    />
-                  </div>
-                )}
               </div>
             </button>
           </form>
