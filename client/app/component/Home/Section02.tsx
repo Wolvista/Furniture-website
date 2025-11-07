@@ -41,9 +41,9 @@ function Section02() {
                     200+ Happy Customers
                 </div>
             </div> */}
-            <div className='grid grid-cols-1 lg:grid-cols-5 gap-4'>
+            <div className='grid grid-cols-1 lg:grid-cols-5 gap-4 lg:mt-[-50px]'>
                 <div className='col-span-3 relative'>
-                    <Image src="/image/Home/MainHero.png" alt="Section02" width={1920} height={500} className='w-full h-auto object-cover' />
+                    <Image src="/image/Home/HeroI.png" alt="Section02" width={1920} height={500} className='w-full h-auto object-cover' />
                     {/* Desktop/Tablet: overlay tooltip */}
                     {/* <div className='hidden sm:block sm:absolute top-0 left-0'>
                         <Tooltip />

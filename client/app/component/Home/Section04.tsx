@@ -12,10 +12,10 @@ function Section04() {
                     <Image src="/image/Home/Rectanglek.png" alt="Section04" width={1520} height={400} className='w-[300px] h-auto transition-all duration-700 hover:scale-110' />
                 </div>
                 <div className='description font-bold'>
-                Dark Cupboards
+                Modern Sofas
                 </div>
                 <div className='description'>
-                Every curve and joint is meticulously handcrafted using sustainably sourced wood.
+                Sleek design, clean lines, perfect for stylish contemporary living spaces.
                 </div>
             </div>
             </div>
@@ -27,10 +27,10 @@ function Section04() {
                     <Image src="/image/Home/Rectanglekk.png" alt="Section04" width={1920} height={500} className='w-[1150px] h-auto transition-all duration-700 hover:scale-110' />
                 </div>
                 <div className='description font-bold'>
-                Dark Cupboards
+                Classic Sofas
                 </div>
                 <div className='description'>
-                Every curve and joint is meticulously handcrafted using sustainably sourced wood.
+                Elegant craftsmanship with timeless charm and luxurious, detailed upholstery finish.
                 </div>
             </div>
             </div>
@@ -42,10 +42,10 @@ function Section04() {
                     <Image src="/image/Home/Rectanglekkk.png" alt="Section04" width={1920} height={500} className='w-[450px] h-auto transition-all duration-700 hover:scale-110' />
                 </div>
                 <div className='description font-bold'>
-                Dark Cupboards
+                Contemporary Sofas
                 </div>
                 <div className='description'>
-                Every curve and joint is meticulously handcrafted using sustainably sourced wood.
+                Soft curves, vibrant tones, blending innovation with everyday modern comfort.
                 </div>
             </div>
             </div>
@@ -57,10 +57,10 @@ function Section04() {
                     <Image src="/image/Home/Rectanglekkkk.png" alt="Section04" width={1920} height={500} className='w-[250px] h-auto transition-all duration-700 hover:scale-110' />
                 </div>
                 <div className='description font-bold'>
-                Dark Cupboards
+                Luxury Sectional Sofas
                 </div>
                 <div className='description'>
-                Every curve and joint is meticulously handcrafted using sustainably sourced wood.
+                Spacious, customizable seating designed for family gatherings and modern interiors.
                 </div>
             </div>
             </div>

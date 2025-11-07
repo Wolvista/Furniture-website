@@ -1,12 +1,14 @@
 import React from 'react'
-
+import Image from 'next/image'
+import Start from '@/public/image/Home/Star.png'
 
 function Section05() {
     return (
         <div className='margin-y'>
             <div>
-                <div className="title flex items-center justify-center ">
-                    Bespoke Mode to Order
+                <div className="title flex flex-col md:flex-row items-center justify-center gap-2">
+                    <span className="flex items-center gap-2">Bespoke <Image src={Start} alt="Start" className="h-[1em] w-auto" /></span>
+                    <span>Made to Order</span>
                 </div>
             </div>
             <div className='margin-y grid grid-cols-1 lg:grid-cols-3 gap-4'>

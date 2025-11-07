@@ -4,15 +4,13 @@ import Aboutus from '../Buttons/aboutus'
 function Section03() {
     return (
         <div className='margin-y'>
-            <div className="small-text">
-                About us
-            </div>
+            
             <div className="lg:flex flex-row items-center justify-between gap-4">
                 <div>
-                    <div className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] text-left">
+                    <div className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] text-left font-poppins">
                         Crafting furniture that feels
                     </div>
-                    <div className='subtitle flex flex-col md:flex-row md:items-center gap-4 md:gap-6'>
+                    <div className='subtitle flex flex-col md:flex-row md:items-end gap-4 md:gap-6'>
                         <span>like home</span>
                         <Aboutus />
                     </div>

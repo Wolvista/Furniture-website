@@ -11,7 +11,7 @@ import Section09 from "./component/Home/Section09";
 import Footer2 from "./component/Footer/Footer2";
 export default function Home() {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar2 />
       <div className=" py-20 containerpaddin container mx-auto ">
 

@@ -13,7 +13,7 @@ import { Navbar2 } from '../component/Navbar/Navbar2'
 function page() {
     const [activeCategory, setActiveCategory] = useState('All')
     return (
-        <div>
+        <div className="font-poppins">
             <Navbar2 />
 
             <div className='containerpaddin container mx-auto'>
@@ -23,7 +23,7 @@ function page() {
                         data-aos-duration="2000">
                         <div className="lg:flex flex-row items-center justify-between gap-4">
                             <div className="subtitle text-left">
-                                Curated Creations for the Modern  <span className="hidden lg:block" /> Home
+                                Curated Creations for the   <span className="hidden lg:block" />Modern Home
                             </div>
                             <div className="description w-auto ">
                                 Every piece in The Everwood Collection tells a story of beauty, purpose, <span className="hidden lg:block" /> and enduring quality. Designed with modern sophistication and built  <span className="hidden lg:block" /> by skilled artisans, our collections bring warmth and character into

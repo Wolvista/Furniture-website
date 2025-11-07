@@ -20,7 +20,7 @@ function Section01() {
 
   return (
     <div data-aos="fade-up" data-aos-duration="2000">
-      <div className='-mt-15 lg:mt-0'>
+      <div className='-mt-15 lg:mt-[-50px]'>
         <div className='title text-center leading-tight font-poppins'>
           The Everwood <span className='font-bold'>{displayText}{currentIndex < wordToType.length && <span className="animate-pulse">|</span>}</span> <br />
           <div className='h-[2px] w-4/5 lg:w-2/3 mx-auto bg-black lg:my-4 my-2'>
