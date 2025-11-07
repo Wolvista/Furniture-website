@@ -10,7 +10,7 @@ function ComingSoon() {
 
       {/* Main Coming Soon Section */}
       <div className="mb-10">
-        <div className="containerpaddin container mx-auto">
+        <div className="containerpaddin container mx-auto py-10 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[70vh]">
             {/* Left Side - Content */}
             <div className="flex flex-col gap-6 lg:gap-8 order-1 lg:order-1">
@@ -27,11 +27,11 @@ function ComingSoon() {
               </h1>
 
               {/* Description */}
-              <p className="description text-text/70 font-poppins leading-relaxed max-w-xl">
+              {/* <p className="description text-text/70 font-poppins leading-relaxed max-w-xl">
                 We're handcrafting a new collection of bespoke furniture pieces
                 that will elevate your living space. Each design is carefully
                 created with sustainably sourced wood and expert craftsmanship.
-              </p>
+              </p> */}
 
               {/* Countdown or Email Subscription */}
               <div className="flex flex-col gap-4 mt-4">
