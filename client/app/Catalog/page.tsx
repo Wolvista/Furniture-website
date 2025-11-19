@@ -3,10 +3,12 @@ import React, { useState } from 'react'
 
 import Footer2 from '../component/Footer/Footer2'
 import Image from 'next/image'
+{/*
 import Collection1 from '@/public/image/Collection/Collection1.png'
 import Collection2 from '@/public/image/Collection/Collection2.png'
 import Collection3 from '@/public/image/Collection/Collection3.png'
 import Collection4 from '@/public/image/Collection/Collection4.png'
+*/}
 import Section08 from '../component/Home/Section08'
 import { Navbar2 } from '../component/Navbar/Navbar2'
 
@@ -31,8 +33,8 @@ function page() {
                             </div>
                         </div>
                     </div>
-
-                    <div className='margin-y'>
+                    
+                    {/*<div className='margin-y'>
                         <div data-aos="fade-up"
                             data-aos-delay="500"
                             data-aos-duration="2000">
@@ -53,15 +55,12 @@ function page() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                     <div data-aos="fade-up"
                     data-aos-delay="100"
                     data-aos-duration="2000">
                     <div className='margin-y'>
                         <div className="lg:flex flex-row items-center justify-between gap-4">
-                            <div className="subtitle text-left">
-                                Curated Collections
-                            </div>
                             <div className='flex flex-row gap-2 md:gap-4 w-full lg:w-auto mt-4 lg:mt-0 overflow-x-auto scrollbar-hide'>
                                 <button 
                                     onClick={() => setActiveCategory('All')}
@@ -102,6 +101,16 @@ function page() {
                                     }`}
                                 >
                                     Wardrobes
+                                </button>
+                                <button 
+                                    onClick={() => setActiveCategory('Kitchen')}
+                                    className={`py-2 px-4 md:px-8 rounded-full transition-colors cursor-pointer whitespace-nowrap shrink-0 ${
+                                        activeCategory === 'Kitchen' 
+                                            ? 'bg-button text-white' 
+                                            : 'text-button hover:bg-button hover:text-white'
+                                    }`}
+                                >
+                                    Kitchen
                                 </button>
                             </div>
                         </div>
